@@ -54,7 +54,7 @@ func (cfg *apiConfig) handlerMetrics(w http.ResponseWriter, r *http.Request) {
  	 <h1>Welcome, Chirpy Admin</h1>
 	 <p>Chirpy has been visited %d times!</p>
 	</body>
-	<html>`, cfg.fileserverHits.Load)))
+	</html>`, cfg.fileserverHits.Load())))
 }
 
 func (cfg *apiConfig) handlerReset(w http.ResponseWriter, r *http.Request) {
