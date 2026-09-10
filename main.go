@@ -24,6 +24,8 @@ func main() {
 
 	mux.HandleFunc("GET /api/healthz", handlerReadiness)
 
+	mux.HandleFunc("POST /api/validate_chirp", handlerChirpsValidate)
+
 	srv := &http.Server{
 		Addr:    ":8080",
 		Handler: mux,
